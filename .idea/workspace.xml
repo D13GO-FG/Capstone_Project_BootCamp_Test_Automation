@@ -4,11 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e78e07d6-a638-4a99-93d0-38bab801300c" name="Changes" comment="" />
+    <list default="true" id="e78e07d6-a638-4a99-93d0-38bab801300c" name="Changes" comment="SR-12111: Displayed three categories in the left.">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pageObjects/BasePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pageObjects/DemoBlazePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/steps/BaseStep.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/steps/DemoBlazeSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tests/BaseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tests/CustomAssertions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tests/DemoBlazeTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testng_groups.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2J1T62nYFecuW3Pa9vHGxRbqHnH" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -19,9 +44,46 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
   }
 }]]></component>
+  <component name="RunManager" selected="TestNG.D:/2022/Java Projects/Capstone_project_Test_Automation/testng_groups.xml">
+    <configuration name="D:/2022/Java Projects/Capstone_project_Test_Automation/testng_groups.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Capstone_project_Test_Automation" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng_groups.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DemoBlazeTests.TestTitle" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Capstone_project_Test_Automation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.DemoBlazeTests" />
+      <option name="METHOD_NAME" value="TestTitle" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.D:/2022/Java Projects/Capstone_project_Test_Automation/testng_groups.xml" />
+        <item itemvalue="TestNG.DemoBlazeTests.TestTitle" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -31,6 +93,41 @@
       <option name="presentableId" value="Default" />
       <updated>1671244413466</updated>
     </task>
+    <task id="LOCAL-00001" summary="Set up of folders and dependencies of Maven.">
+      <created>1671244751826</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1671244751826</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Set up of folders and dependencies of Maven." />
+    <MESSAGE value="SR-12111: Displayed three categories in the left." />
+    <option name="LAST_COMMIT_MESSAGE" value="SR-12111: Displayed three categories in the left." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/tests/DemoBlazeTests.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
