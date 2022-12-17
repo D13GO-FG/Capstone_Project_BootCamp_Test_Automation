@@ -1,5 +1,6 @@
 package steps;
 
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import pageObjects.DemoBlazePage;
@@ -16,14 +17,26 @@ public class DemoBlazeSteps extends BaseStep {
     }
 
     public Boolean getCategoryPhone() {
-        return demoBlazePage.getCategoryPhone().isDisplayed();
+        try {
+            return demoBlazePage.getCategoryPhone().isDisplayed();
+        } catch (NoSuchElementException e) {
+            return false;
+        }
     }
 
     public Boolean getCategoryLaptop() {
-        return demoBlazePage.getCategoryLaptop().isDisplayed();
+        try {
+            return demoBlazePage.getCategoryLaptop().isDisplayed();
+        } catch (NoSuchElementException e) {
+            return false;
+        }
     }
 
     public Boolean getCategoryMonitor() {
-        return demoBlazePage.getCategoryMonitor().isDisplayed();
+        try {
+            return demoBlazePage.getCategoryMonitor().isDisplayed();
+        } catch (NoSuchElementException e) {
+            return false;
+        }
     }
 }

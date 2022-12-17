@@ -5,17 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e78e07d6-a638-4a99-93d0-38bab801300c" name="Changes" comment="SR-12111: Displayed three categories in the left.">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pageObjects/BasePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pageObjects/DemoBlazePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/steps/BaseStep.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/steps/DemoBlazeSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tests/BaseTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tests/CustomAssertions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tests/DemoBlazeTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testng_groups.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/steps/DemoBlazeSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/steps/DemoBlazeSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tests/DemoBlazeTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tests/DemoBlazeTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +40,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.D:/2022/Java Projects/Capstone_project_Test_Automation/testng_groups.xml">
+  <component name="RunManager" selected="TestNG.DemoBlazeTests.TestTitle">
     <configuration name="D:/2022/Java Projects/Capstone_project_Test_Automation/testng_groups.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Capstone_project_Test_Automation" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/testng_groups.xml" />
@@ -79,8 +71,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.D:/2022/Java Projects/Capstone_project_Test_Automation/testng_groups.xml" />
         <item itemvalue="TestNG.DemoBlazeTests.TestTitle" />
+        <item itemvalue="TestNG.D:/2022/Java Projects/Capstone_project_Test_Automation/testng_groups.xml" />
       </list>
     </recent_temporary>
   </component>
@@ -100,7 +92,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671244751826</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="SR-12111: Displayed three categories in the left.">
+      <created>1671254068266</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1671254068266</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -124,7 +123,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/tests/DemoBlazeTests.java</url>
-          <line>15</line>
+          <line>16</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
