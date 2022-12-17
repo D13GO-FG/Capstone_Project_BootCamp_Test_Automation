@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e78e07d6-a638-4a99-93d0-38bab801300c" name="Changes" comment="SR-12111: Displayed three categories in the left.">
+    <list default="true" id="e78e07d6-a638-4a99-93d0-38bab801300c" name="Changes" comment="SR-12111: Add try catch in methods of DemoBlazeSteps.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/DemoBlazePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/DemoBlazePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/steps/DemoBlazeSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/steps/DemoBlazeSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tests/CustomAssertions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tests/CustomAssertions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tests/DemoBlazeTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tests/DemoBlazeTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,7 +42,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.DemoBlazeTests.TestTitle">
+  <component name="RunManager" selected="TestNG.DemoBlazeTests.testClickProductDetails">
     <configuration name="D:/2022/Java Projects/Capstone_project_Test_Automation/testng_groups.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Capstone_project_Test_Automation" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/testng_groups.xml" />
@@ -51,7 +53,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DemoBlazeTests.TestTitle" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="D:/2022/Java Projects/Capstone_project_Test_Automation/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Capstone_project_Test_Automation" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DemoBlazeTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Capstone_project_Test_Automation" />
       <extension name="coverage">
         <pattern>
@@ -61,7 +73,42 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.DemoBlazeTests" />
-      <option name="METHOD_NAME" value="TestTitle" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DemoBlazeTests.testCategories" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Capstone_project_Test_Automation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.DemoBlazeTests" />
+      <option name="METHOD_NAME" value="testCategories" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DemoBlazeTests.testClickProductDetails" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Capstone_project_Test_Automation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.DemoBlazeTests" />
+      <option name="METHOD_NAME" value="testClickProductDetails" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -71,7 +118,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.DemoBlazeTests.TestTitle" />
+        <item itemvalue="TestNG.DemoBlazeTests.testClickProductDetails" />
+        <item itemvalue="TestNG.D:/2022/Java Projects/Capstone_project_Test_Automation/testng.xml" />
+        <item itemvalue="TestNG.DemoBlazeTests.testCategories" />
+        <item itemvalue="TestNG.DemoBlazeTests" />
         <item itemvalue="TestNG.D:/2022/Java Projects/Capstone_project_Test_Automation/testng_groups.xml" />
       </list>
     </recent_temporary>
@@ -99,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671254068266</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="SR-12111: Add try catch in methods of DemoBlazeSteps.">
+      <created>1671255832267</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1671255832267</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -116,15 +173,21 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Set up of folders and dependencies of Maven." />
     <MESSAGE value="SR-12111: Displayed three categories in the left." />
-    <option name="LAST_COMMIT_MESSAGE" value="SR-12111: Displayed three categories in the left." />
+    <MESSAGE value="SR-12111: Add try catch in methods of DemoBlazeSteps." />
+    <option name="LAST_COMMIT_MESSAGE" value="SR-12111: Add try catch in methods of DemoBlazeSteps." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/tests/DemoBlazeTests.java</url>
-          <line>16</line>
+          <line>15</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/tests/DemoBlazeTests.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

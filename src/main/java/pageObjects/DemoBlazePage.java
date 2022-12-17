@@ -19,6 +19,24 @@ public class DemoBlazePage extends BasePage {
     @FindBy(how = How.XPATH, using = "(//a[normalize-space()='Monitors'])[1]")
     private WebElement categoryMonitor;
 
+    @FindBy(how = How.XPATH, using = "(//div[@class='col-lg-4 col-md-6 mb-4'])[1]")
+    private WebElement productCatalog;
+
+    @FindBy(how = How.XPATH, using = "//h2[@class='name']")
+    private WebElement productName;
+
+    @FindBy(how = How.XPATH, using = "//h3[@class='price-container']")
+    private WebElement productPrice;
+
+    @FindBy(how = How.XPATH, using = "//div[@id='more-information']//p")
+    private WebElement productDescription;
+
+    @FindBy(how = How.XPATH, using = "//div[@class='item active']//img")
+    private WebElement productImage;
+
+    @FindBy(how = How.XPATH, using = "//a[text()='Add to cart']")
+    private WebElement cartButton;
+
     public WebElement getCategoryPhone() {
         return categoryPhone;
     }
@@ -29,5 +47,29 @@ public class DemoBlazePage extends BasePage {
 
     public WebElement getCategoryMonitor() {
         return categoryMonitor;
+    }
+
+    public WebElement getProductCatalog() {
+        return productCatalog;
+    }
+
+    public WebElement getProductName() {
+        return productName;
+    }
+
+    public WebElement getProductPrice() {
+        return productPrice;
+    }
+
+    public WebElement getProductDescription() {
+        return productDescription;
+    }
+
+    public WebElement getProductImage() {
+        return productImage;
+    }
+
+    public WebElement getCartButton() {
+        return cartButton;
     }
 }
