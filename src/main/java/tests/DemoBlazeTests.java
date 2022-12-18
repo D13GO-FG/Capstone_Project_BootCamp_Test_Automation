@@ -24,4 +24,10 @@ public class DemoBlazeTests extends BaseTest {
         CustomAssertions.isElementDisplayed(demoBlazeSteps.getProductImage(), "PRODUCT IMAGE");
         CustomAssertions.isElementDisplayed(demoBlazeSteps.getProductCartButton(), "CART BUTTON");
     }
+
+    @Test(description = "SR-12121: Test to click add to cart button will display browser alert with below information", groups = "SmokeSuite")
+    public void testAlertCartButton(){
+        demoBlazeSteps.getProductCatalog();
+        CustomAssertions.isAlertAccepted(demoBlazeSteps.alertCartButton());
+    }
 }

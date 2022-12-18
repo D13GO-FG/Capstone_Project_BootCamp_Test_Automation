@@ -17,4 +17,15 @@ public class CustomAssertions extends Assert {
         String errorMessage = "Element '" + Element + "' is not displayed";
         Assert.assertTrue(isElementDisplayed, errorMessage);
     }
+
+    public static void isAlertDescriptionValid(String actualDescription){
+        String expectedDescription = "Product added";
+        String errorMessage = "Alert description is not as expected. Expected: '"+ expectedDescription + "', got: '" + actualDescription;
+        Assert.assertEquals(actualDescription, expectedDescription, errorMessage);
+    }
+
+    public static void isAlertAccepted(Boolean isAlertAccepted){
+        String errorMessage = "Alert not present";
+        Assert.assertTrue(isAlertAccepted, errorMessage);
+    }
 }

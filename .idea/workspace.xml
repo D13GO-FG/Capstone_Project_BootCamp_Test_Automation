@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e78e07d6-a638-4a99-93d0-38bab801300c" name="Changes" comment="SR-12111: Add try catch in methods of DemoBlazeSteps.">
+    <list default="true" id="e78e07d6-a638-4a99-93d0-38bab801300c" name="Changes" comment="SR-12120: Test to click any of the products in the catalog displayed in the&#10;homepage and verify display of: Add to cart button, product description, price, name of product and image of product.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/DemoBlazePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/DemoBlazePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/steps/DemoBlazeSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/steps/DemoBlazeSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tests/CustomAssertions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tests/CustomAssertions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tests/DemoBlazeTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tests/DemoBlazeTests.java" afterDir="false" />
@@ -39,20 +38,11 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "D:/2022/Java Projects/Bootcamp_Framework"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.DemoBlazeTests.testClickProductDetails">
-    <configuration name="D:/2022/Java Projects/Capstone_project_Test_Automation/testng_groups.xml" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Capstone_project_Test_Automation" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng_groups.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.DemoBlazeTests.testAlertCartButton">
     <configuration name="D:/2022/Java Projects/Capstone_project_Test_Automation/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Capstone_project_Test_Automation" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
@@ -74,6 +64,24 @@
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.DemoBlazeTests" />
       <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DemoBlazeTests.testAlertCartButton" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Capstone_project_Test_Automation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.DemoBlazeTests" />
+      <option name="METHOD_NAME" value="testAlertCartButton" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -118,11 +126,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.DemoBlazeTests.testAlertCartButton" />
         <item itemvalue="TestNG.DemoBlazeTests.testClickProductDetails" />
         <item itemvalue="TestNG.D:/2022/Java Projects/Capstone_project_Test_Automation/testng.xml" />
         <item itemvalue="TestNG.DemoBlazeTests.testCategories" />
         <item itemvalue="TestNG.DemoBlazeTests" />
-        <item itemvalue="TestNG.D:/2022/Java Projects/Capstone_project_Test_Automation/testng_groups.xml" />
       </list>
     </recent_temporary>
   </component>
@@ -156,7 +164,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671255832267</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="SR-12120: Test to click any of the products in the catalog displayed in the&#10;homepage and verify display of: Add to cart button, product description, price, name of product and image of product.">
+      <created>1671270249331</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1671270249331</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -174,7 +189,8 @@
     <MESSAGE value="Set up of folders and dependencies of Maven." />
     <MESSAGE value="SR-12111: Displayed three categories in the left." />
     <MESSAGE value="SR-12111: Add try catch in methods of DemoBlazeSteps." />
-    <option name="LAST_COMMIT_MESSAGE" value="SR-12111: Add try catch in methods of DemoBlazeSteps." />
+    <MESSAGE value="SR-12120: Test to click any of the products in the catalog displayed in the&#10;homepage and verify display of: Add to cart button, product description, price, name of product and image of product." />
+    <option name="LAST_COMMIT_MESSAGE" value="SR-12120: Test to click any of the products in the catalog displayed in the&#10;homepage and verify display of: Add to cart button, product description, price, name of product and image of product." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

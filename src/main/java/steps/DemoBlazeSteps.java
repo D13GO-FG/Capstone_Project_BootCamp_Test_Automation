@@ -1,5 +1,6 @@
 package steps;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -7,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pageObjects.DemoBlazePage;
+import tests.CustomAssertions;
 
 import java.time.Duration;
 
@@ -94,6 +96,21 @@ public class DemoBlazeSteps extends BaseStep {
         try {
             return demoBlazePage.getCartButton().isDisplayed();
         } catch (NoSuchElementException e) {
+            return false;
+        }
+    }
+
+    public Boolean alertCartButton(){
+        try {
+            WebElement isButtonEnable = new WebDriverWait(webDriver, Duration.ofSeconds(50)).until(ExpectedConditions.visibilityOf(demoBlazePage.getCartButton()));
+            isButtonEnable.click();
+            WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(5));
+            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+            String actualDescription = alert.getText();
+            CustomAssertions.isAlertDescriptionValid(actualDescription);
+            alert.accept();
+            return true;
+        }catch (Exception e){
             return false;
         }
     }
