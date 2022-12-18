@@ -22,6 +22,9 @@ public class DemoBlazePage extends BasePage {
     @FindBy(how = How.XPATH, using = "(//div[@class='col-lg-4 col-md-6 mb-4'])[1]")
     private WebElement productCatalog;
 
+    @FindBy(how = How.XPATH, using = "(//div[@class='col-lg-4 col-md-6 mb-4'])[2]")
+    private WebElement productCatalog2;
+
     @FindBy(how = How.XPATH, using = "//h2[@class='name']")
     private WebElement productName;
 
@@ -36,6 +39,9 @@ public class DemoBlazePage extends BasePage {
 
     @FindBy(how = How.XPATH, using = "//a[text()='Add to cart']")
     private WebElement cartButton;
+
+    @FindBy(how = How.XPATH, using = "//a[normalize-space()='Cart']")
+    private WebElement btnCart;
 
     public WebElement getCategoryPhone() {
         return categoryPhone;
@@ -71,5 +77,13 @@ public class DemoBlazePage extends BasePage {
 
     public WebElement getCartButton() {
         return cartButton;
+    }
+
+    public WebElement getBtnCart() {
+        return btnCart;
+    }
+
+    public WebElement getProductCatalog2() {
+        return productCatalog2;
     }
 }
