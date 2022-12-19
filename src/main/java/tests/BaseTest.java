@@ -32,10 +32,12 @@ public class BaseTest {
 
     @BeforeMethod(alwaysRun = true)
     public void beforeTest() {
+        System.out.println("Execution test ...");
     }
 
     @AfterMethod(alwaysRun = true)
     public void afterTest() {
+        System.out.println("Closing test ...");
         driver.quit();
     }
 }
