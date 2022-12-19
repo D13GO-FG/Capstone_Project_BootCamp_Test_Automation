@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
+import java.util.List;
+
 public class DemoBlazePage extends BasePage {
     public DemoBlazePage(WebDriver webDriver) {
         super(webDriver);
@@ -19,11 +21,8 @@ public class DemoBlazePage extends BasePage {
     @FindBy(how = How.XPATH, using = "(//a[normalize-space()='Monitors'])[1]")
     private WebElement categoryMonitor;
 
-    @FindBy(how = How.XPATH, using = "(//div[@class='col-lg-4 col-md-6 mb-4'])[1]")
+    @FindBy(how = How.XPATH, using = "//*[@id='tbodyid']/div[1]/div/div/h4/a")
     private WebElement productCatalog;
-
-    @FindBy(how = How.XPATH, using = "(//div[@class='col-lg-4 col-md-6 mb-4'])[2]")
-    private WebElement productCatalog2;
 
     @FindBy(how = How.XPATH, using = "//h2[@class='name']")
     private WebElement productName;
@@ -42,6 +41,18 @@ public class DemoBlazePage extends BasePage {
 
     @FindBy(how = How.XPATH, using = "//a[normalize-space()='Cart']")
     private WebElement btnCart;
+
+    @FindBy(how = How.XPATH, using = "//h3[@id='totalp']")
+    private WebElement totalCart;
+
+    @FindBy(how = How.XPATH, using = "//button[normalize-space()='Place Order']")
+    private WebElement btnPlaceOrder;
+
+    @FindBy(how = How.XPATH, using = "//div[@class='col-lg-4 col-md-6 mb-4']")
+    private List<WebElement> listProducts;
+
+    @FindBy(how = How.XPATH, using = "//tbody")
+    private  WebElement tableCart;
 
     public WebElement getCategoryPhone() {
         return categoryPhone;
@@ -83,7 +94,19 @@ public class DemoBlazePage extends BasePage {
         return btnCart;
     }
 
-    public WebElement getProductCatalog2() {
-        return productCatalog2;
+    public WebElement getTotalCart() {
+        return totalCart;
+    }
+
+    public WebElement getBtnPlaceOrder() {
+        return btnPlaceOrder;
+    }
+
+    public List<WebElement> getListProducts() {
+        return listProducts;
+    }
+
+    public WebElement getTableCart() {
+        return tableCart;
     }
 }

@@ -46,43 +46,41 @@ public class DemoBlazeSteps extends BaseStep {
         }
     }
 
-    public void getProductCatalog(int n){
-        if (n == 1){
+    public Boolean getProductCatalog() {
+        try {
+            boolean isDisplayed = demoBlazePage.getProductCatalog().isDisplayed();
             demoBlazePage.getProductCatalog().click();
-        } else if (n == 2){
-            demoBlazePage.getProductCatalog2().click();
+            return isDisplayed;
+        } catch (NoSuchElementException e) {
+            return false;
         }
-
     }
 
-    public Boolean getProductName(){
+    public Boolean getProductName() {
         try {
             WebElement valueProduct = new WebDriverWait(webDriver, Duration.ofSeconds(50)).until(ExpectedConditions.visibilityOf(demoBlazePage.getProductName()));
-            Boolean value = valueProduct.getText().isEmpty();
-            return value;
-        }catch (NoSuchElementException e){
+            return valueProduct.getText().isEmpty();
+        } catch (NoSuchElementException e) {
             System.out.println("Element NAME not found");
             return true;
         }
     }
 
-    public Boolean getProductPrice(){
+    public Boolean getProductPrice() {
         try {
             WebElement valueProduct = new WebDriverWait(webDriver, Duration.ofSeconds(50)).until(ExpectedConditions.visibilityOf(demoBlazePage.getProductPrice()));
-            Boolean value = valueProduct.getText().isEmpty();
-            return value;
-        }catch (NoSuchElementException e){
+            return valueProduct.getText().isEmpty();
+        } catch (NoSuchElementException e) {
             System.out.println("Element PRICE not found");
             return true;
         }
     }
 
-    public Boolean getProductDescription(){
+    public Boolean getProductDescription() {
         try {
             WebElement valueProduct = new WebDriverWait(webDriver, Duration.ofSeconds(50)).until(ExpectedConditions.visibilityOf(demoBlazePage.getProductDescription()));
-            Boolean value = valueProduct.getText().isEmpty();
-            return value;
-        }catch (NoSuchElementException e){
+            return valueProduct.getText().isEmpty();
+        } catch (NoSuchElementException e) {
             System.out.println("Element DESCRIPTION not found");
             return true;
         }
@@ -104,7 +102,7 @@ public class DemoBlazeSteps extends BaseStep {
         }
     }
 
-    public Boolean alertCartButton(){
+    public Boolean alertCartButton() {
         try {
             WebElement isButtonEnable = new WebDriverWait(webDriver, Duration.ofSeconds(50)).until(ExpectedConditions.visibilityOf(demoBlazePage.getCartButton()));
             isButtonEnable.click();
@@ -114,37 +112,35 @@ public class DemoBlazeSteps extends BaseStep {
             CustomAssertions.isAlertDescriptionValid(actualDescription);
             alert.accept();
             return true;
-        }catch (Exception e){
+        } catch (Exception e) {
             return false;
         }
     }
 
-    public void tableProductCart(){
-        getProductCatalog(1);
-        for (int i = 0; i < 2; i++) {
+    public void addAllProductMainPage(){
+        int n = demoBlazePage.getListProducts().size();
+        for (int i = 0; i < n; i++) {
+            List<WebElement> product = new WebDriverWait(webDriver, Duration.ofSeconds(5)).until(ExpectedConditions.visibilityOfAllElements(demoBlazePage.getListProducts()));
+            product.get(i).findElement(By.tagName("a")).click();
             alertCartButton();
+            webDriver.get("https://www.demoblaze.com/");
         }
+    }
 
-        webDriver.navigate().back();
-        webDriver.navigate().back();
-        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+    public void tableProductCart() {
+        addAllProductMainPage();
 
-        getProductCatalog(2);
-        for (int i = 0; i < 3; i++) {
-            alertCartButton();
-        }
         demoBlazePage.getBtnCart().click();
-        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 
-        WebElement table = webDriver.findElement(By.xpath("//tbody"));
+        WebElement table = new WebDriverWait(webDriver, Duration.ofSeconds(5)).until(ExpectedConditions.visibilityOf(demoBlazePage.getTableCart()));
         List<WebElement> rows = table.findElements(By.tagName("tr"));
         List<WebElement> columns;
-        for (WebElement row:rows) {
+        for (WebElement row : rows) {
             System.out.println();
             columns = row.findElements(By.tagName("td"));
 
             for (int i = 0; i <= 3; i++) {
-                switch (i){
+                switch (i) {
                     case 0:
                         WebElement img = columns.get(0).findElement(By.tagName("img"));
                         System.out.println(img.getAttribute("src"));
@@ -169,5 +165,19 @@ public class DemoBlazeSteps extends BaseStep {
                 }
             }
         }
+    }
+
+    public Boolean labelTotalCart() {
+        WebElement total = new WebDriverWait(webDriver, Duration.ofSeconds(5)).until(ExpectedConditions.visibilityOf(demoBlazePage.getTotalCart()));
+        String text = total.getText();
+        System.out.println(text);
+        return text.isEmpty();
+    }
+
+    public Boolean btnPlaceOrder() {
+        WebElement label = new WebDriverWait(webDriver, Duration.ofSeconds(5)).until(ExpectedConditions.visibilityOf(demoBlazePage.getBtnPlaceOrder()));
+        String text = label.getText();
+        System.out.println(text);
+        return demoBlazePage.getBtnPlaceOrder().isDisplayed();
     }
 }
