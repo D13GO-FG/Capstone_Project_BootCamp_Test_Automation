@@ -25,12 +25,23 @@ public class CustomAssertions extends Assert {
     }
 
     public static void isAlertAccepted(Boolean isAlertAccepted){
-        String errorMessage = "Alert not present";
+        String errorMessage = "Alert not present, product not added to cart";
         Assert.assertTrue(isAlertAccepted, errorMessage);
     }
 
     public static void isTotalPriceCorrect(Double actualTotalPrice, Double expectedTotalPrice){
         String errorMessage = "Total price is not correct. Expected: " + expectedTotalPrice + ", got: " + actualTotalPrice;
-        Assert.assertEquals(actualTotalPrice, expectedTotalPrice, "Total price is not correct");
+        Assert.assertEquals(actualTotalPrice, expectedTotalPrice, errorMessage);
+    }
+
+    public static void isClicked(Boolean isClicked, String title){
+        String errorMessage = "Button " + title + " wasn't clicked";
+        Assert.assertTrue(isClicked, errorMessage);
+    }
+
+    public static void isSuccessPurchase(String actualMessage){
+        String expectedMessage = "Thank you for your purchase!";
+        String errorMessage = "Fail purchase, expected message" + expectedMessage + ", got: " + actualMessage;
+        Assert.assertEquals(actualMessage, expectedMessage, errorMessage);
     }
 }
