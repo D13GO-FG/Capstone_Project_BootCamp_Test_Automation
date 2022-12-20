@@ -28,4 +28,9 @@ public class CustomAssertions extends Assert {
         String errorMessage = "Alert not present";
         Assert.assertTrue(isAlertAccepted, errorMessage);
     }
+
+    public static void isTotalPriceCorrect(Double actualTotalPrice, Double expectedTotalPrice){
+        String errorMessage = "Total price is not correct. Expected: " + expectedTotalPrice + ", got: " + actualTotalPrice;
+        Assert.assertEquals(actualTotalPrice, expectedTotalPrice, "Total price is not correct");
+    }
 }

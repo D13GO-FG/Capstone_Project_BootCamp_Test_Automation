@@ -5,14 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e78e07d6-a638-4a99-93d0-38bab801300c" name="Changes" comment="SR-12130: Add validations to &quot;Total of items prices&quot; and &quot;Place order button&quot;">
-      <change afterPath="$PROJECT_DIR$/testng_SR-12120 .xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testng_SR-12121 .xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testng_SR-12130 .xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/DemoBlazePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/DemoBlazePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/steps/DemoBlazeSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/steps/DemoBlazeSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tests/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tests/CustomAssertions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tests/CustomAssertions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tests/DemoBlazeTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tests/DemoBlazeTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testng_groups.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng_SR-12111.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,20 +35,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "D:/2022/Java Projects/Capstone_project_Test_Automation"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/2022/Java Projects/Capstone_project_Test_Automation&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\2022\Java Projects\Capstone_project_Test_Automation" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.DemoBlazeTests.testListCart">
+  <component name="RunManager" selected="TestNG.D:/2022/Java Projects/Capstone_project_Test_Automation/testng_SR-12130 .xml">
     <configuration name="D:/2022/Java Projects/Capstone_project_Test_Automation/testng_SR-12111.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Capstone_project_Test_Automation" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/testng_SR-12111.xml" />
@@ -112,11 +109,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.DemoBlazeTests.testListCart" />
         <item itemvalue="TestNG.D:/2022/Java Projects/Capstone_project_Test_Automation/testng_SR-12130 .xml" />
         <item itemvalue="TestNG.D:/2022/Java Projects/Capstone_project_Test_Automation/testng_SR-12121 .xml" />
         <item itemvalue="TestNG.D:/2022/Java Projects/Capstone_project_Test_Automation/testng_SR-12120 .xml" />
         <item itemvalue="TestNG.D:/2022/Java Projects/Capstone_project_Test_Automation/testng_SR-12111.xml" />
+        <item itemvalue="TestNG.DemoBlazeTests.testListCart" />
       </list>
     </recent_temporary>
   </component>

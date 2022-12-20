@@ -51,8 +51,8 @@ public class DemoBlazePage extends BasePage {
     @FindBy(how = How.XPATH, using = "//div[@class='col-lg-4 col-md-6 mb-4']")
     private List<WebElement> listProducts;
 
-    @FindBy(how = How.XPATH, using = "//tbody")
-    private  WebElement tableCart;
+    @FindBy(how = How.XPATH, using = "//tbody/tr")
+    private  List<WebElement> tableCart;
 
     public WebElement getCategoryPhone() {
         return categoryPhone;
@@ -106,7 +106,7 @@ public class DemoBlazePage extends BasePage {
         return listProducts;
     }
 
-    public WebElement getTableCart() {
+    public List<WebElement> getTableCart() {
         return tableCart;
     }
 }

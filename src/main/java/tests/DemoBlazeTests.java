@@ -31,8 +31,8 @@ public class DemoBlazeTests extends BaseTest {
 
     @Test(description = "SR-12130: Test to click the cart link will display below information", groups = "SR-12130")
     public void testListCart(){
-        demoBlazeSteps.tableProductCart();
-        CustomAssertions.isDetailEmptyProduct(demoBlazeSteps.labelTotalCart(), "TOTAL CART");
+        double priceTotal = demoBlazeSteps.tableProductCart();
+        CustomAssertions.isDetailEmptyProduct(demoBlazeSteps.labelTotalCart(priceTotal), "TOTAL CART");
         CustomAssertions.isElementDisplayed(demoBlazeSteps.btnPlaceOrder(), "PLACE ORDER");
     }
 }

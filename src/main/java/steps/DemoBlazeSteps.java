@@ -22,6 +22,7 @@ public class DemoBlazeSteps extends BaseStep {
         try {
             Boolean value = demoBlazePage.getCategoryPhone().isDisplayed();
             if (value) System.out.println("Category phone is displayed");
+            demoBlazePage.getCategoryPhone().click();
             return value;
         } catch (NoSuchElementException e) {
             return false;
@@ -32,6 +33,7 @@ public class DemoBlazeSteps extends BaseStep {
         try {
             Boolean value = demoBlazePage.getCategoryLaptop().isDisplayed();
             if (value) System.out.println("Category laptop is displayed");
+            demoBlazePage.getCategoryLaptop().click();
             return value;
         } catch (NoSuchElementException e) {
             return false;
@@ -42,6 +44,7 @@ public class DemoBlazeSteps extends BaseStep {
         try {
             Boolean value = demoBlazePage.getCategoryMonitor().isDisplayed();
             if (value) System.out.println("Category monitor is displayed");
+            demoBlazePage.getCategoryMonitor().click();
             return value;
         } catch (NoSuchElementException e) {
             return false;
@@ -124,8 +127,9 @@ public class DemoBlazeSteps extends BaseStep {
             String actualDescription = alert.getText();
             CustomAssertions.isAlertDescriptionValid(actualDescription);
             alert.accept();
-            System.out.println("Description: " + actualDescription);
-            System.out.println("Alert clicked");
+            System.out.println(demoBlazePage.getProductName().getText() + " was added to cart list.");
+            //System.out.println("Description: " + actualDescription);
+            //System.out.println("Alert clicked");
             return true;
         } catch (Exception e) {
             return false;
@@ -142,15 +146,15 @@ public class DemoBlazeSteps extends BaseStep {
         }
     }
 
-    public void tableProductCart() {
+    public Double tableProductCart() {
         addAllProductMainPage();
 
         demoBlazePage.getBtnCart().click();
 
-        WebElement table = new WebDriverWait(webDriver, Duration.ofSeconds(5)).until(ExpectedConditions.visibilityOf(demoBlazePage.getTableCart()));
-        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
-        List<WebElement> rows = table.findElements(By.tagName("tr"));
+        List<WebElement> rows = new WebDriverWait(webDriver, Duration.ofSeconds(5)).until(ExpectedConditions.visibilityOfAllElements(demoBlazePage.getTableCart()));
         List<WebElement> columns;
+        double priceTotal = 0;
+
         for (WebElement row : rows) {
             System.out.println();
             columns = row.findElements(By.tagName("td"));
@@ -170,6 +174,7 @@ public class DemoBlazeSteps extends BaseStep {
                     case 2:
                         String price = columns.get(2).getText();
                         System.out.println(price);
+                        priceTotal = priceTotal + Double.parseDouble(price);
                         Assert.assertFalse(price.isEmpty(), "Price is empty");
                         break;
                     case 3:
@@ -181,12 +186,15 @@ public class DemoBlazeSteps extends BaseStep {
                 }
             }
         }
+        return priceTotal;
     }
 
-    public Boolean labelTotalCart() {
+    public Boolean labelTotalCart(Double expectedTotalPrice) {
         WebElement total = new WebDriverWait(webDriver, Duration.ofSeconds(5)).until(ExpectedConditions.visibilityOf(demoBlazePage.getTotalCart()));
         String text = total.getText();
-        System.out.println("Total: " + text);
+        double actualTotalPrice = Double.parseDouble(text);
+        CustomAssertions.isTotalPriceCorrect(actualTotalPrice,expectedTotalPrice);
+        System.out.println("Total: $" + actualTotalPrice + " is correct.");
         return text.isEmpty();
     }
 
