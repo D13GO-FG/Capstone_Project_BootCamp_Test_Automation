@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="DemoBlaze Tests">
+    <test verbose="2" preserve-order="true" name="Test: Alert for add product">
+        <classes>
+            <class name="tests.SR_12121"/>
+        </classes>
+    </test>
+</suite>

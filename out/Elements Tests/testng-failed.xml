@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="4" guice-stage="DEVELOPMENT" name="Failed suite [Elements Tests]" parallel="methods">
+  <test thread-count="4" name="D:/2022/Java Projects/Capstone_project_Test_Automation(failed)" parallel="methods">
+    <classes>
+      <class name="tests.SR_12130">
+        <methods>
+          <include name="testFinishPurchase"/>
+          <include name="beforeClass"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- tests.SR_12130 -->
+    </classes>
+  </test> <!-- D:/2022/Java Projects/Capstone_project_Test_Automation(failed) -->
+</suite> <!-- Failed suite [Elements Tests] -->

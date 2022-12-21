@@ -2,6 +2,7 @@ package tests;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import steps.CartSteps;
 import steps.MainSteps;
@@ -9,13 +10,20 @@ import steps.ProductSteps;
 
 import java.util.List;
 
-public class SR_12130 extends BaseTest{
-    MainSteps mainSteps = new MainSteps(driver);
-    ProductSteps productSteps = new ProductSteps(driver);
-    CartSteps cartSteps = new CartSteps(driver);
+public class SR_12130 extends BaseTest {
+    private MainSteps mainSteps;
+    private ProductSteps productSteps;
+    private CartSteps cartSteps;
 
-    @Test(description = "SR-12130: Test to click the cart link will display below information", groups = "SR-12130")
-    public void testListCart(){
+    @BeforeClass
+    private void beforeClass() {
+        mainSteps = new MainSteps(driver);
+        productSteps = new ProductSteps(driver);
+        cartSteps = new CartSteps(driver);
+    }
+
+    @Test(description = "SR-12130: Test to click the cart link will display below information about all products added", groups = "SR_12130", priority = 1)
+    public void testListCart() {
         for (int i = 0; i < mainSteps.listToAddMultipleProducts().size(); i++) {
             List<WebElement> product = mainSteps.listToAddMultipleProducts();
             product.get(i).findElement(By.tagName("a")).click();
@@ -25,9 +33,10 @@ public class SR_12130 extends BaseTest{
         CustomAssertions.isClicked(mainSteps.clickCartLink(), "BUTTON CART");
         CustomAssertions.isTotalPriceCorrect(cartSteps.labelTotalCart(), cartSteps.tableProductCart());
         CustomAssertions.isElementDisplayed(cartSteps.btnPlaceOrder(), "PLACE ORDER");
-        // Positive SR-12131
-        CustomAssertions.isSuccessPurchase(cartSteps.finishPlaceOrder());
     }
 
-
+    @Test(description = "SR_12131: Test to finish purchase successfully", groups = "SR_12131", priority = 2)
+    public void testFinishPurchase() {
+        CustomAssertions.isSuccessPurchase(cartSteps.finishPlaceOrder());
+    }
 }

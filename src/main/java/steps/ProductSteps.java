@@ -19,6 +19,7 @@ public class ProductSteps extends BaseStep{
         super(webDriver);
     }
 
+    // Step to find out if the product name is empty.
     public Boolean getProductName() {
         try {
             WebElement valueProduct = new WebDriverWait(webDriver, Duration.ofSeconds(50)).until(ExpectedConditions.visibilityOf(productPage.getProductName()));
@@ -31,6 +32,7 @@ public class ProductSteps extends BaseStep{
         }
     }
 
+    //// Step to find out if the product price is empty.
     public Boolean getProductPrice() {
         try {
             WebElement valueProduct = new WebDriverWait(webDriver, Duration.ofSeconds(50)).until(ExpectedConditions.visibilityOf(productPage.getProductPrice()));
@@ -43,6 +45,7 @@ public class ProductSteps extends BaseStep{
         }
     }
 
+    // Step to find out if the product description is empty.
     public Boolean getProductDescription() {
         try {
             WebElement valueProduct = new WebDriverWait(webDriver, Duration.ofSeconds(50)).until(ExpectedConditions.visibilityOf(productPage.getProductDescription()));
@@ -55,6 +58,7 @@ public class ProductSteps extends BaseStep{
         }
     }
 
+    // Step to find out if the product image is displayed.
     public Boolean getProductImage() {
         try {
             WebElement valueProduct = new WebDriverWait(webDriver, Duration.ofSeconds(50)).until(ExpectedConditions.visibilityOf(productPage.getProductImage()));
@@ -66,6 +70,7 @@ public class ProductSteps extends BaseStep{
         }
     }
 
+    // Step to find out if Cart Button is displayed.
     public Boolean getProductCartButton() {
         try {
             Boolean isBtnDisplayed = productPage.getCartButton().isDisplayed();
@@ -76,6 +81,7 @@ public class ProductSteps extends BaseStep{
         }
     }
 
+    // Step to click cart button of specific product and check if alter poop up is correct.
     public Boolean alertCartButton() {
         try {
             WebElement isButtonEnable = new WebDriverWait(webDriver, Duration.ofSeconds(50)).until(ExpectedConditions.visibilityOf(productPage.getCartButton()));

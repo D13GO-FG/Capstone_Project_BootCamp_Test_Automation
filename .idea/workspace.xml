@@ -4,26 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e78e07d6-a638-4a99-93d0-38bab801300c" name="Changes" comment="SR-12130: Changes in how generate the list cart and added more assertions to total price in cart list.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pageObjects/CartPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pageObjects/MainPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pageObjects/ProductPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/steps/CartSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/steps/MainSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/steps/ProductSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tests/SR_12111.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tests/SR_12120.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tests/SR_12121.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tests/SR_12130.java" afterDir="false" />
+    <list default="true" id="e78e07d6-a638-4a99-93d0-38bab801300c" name="Changes" comment="Refactor structure files to achieve The Page Object Model (POM) patter and added step to complete purchase in CartPage.">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/browserDrivers/chromedriver.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/browserDrivers/geckodriver.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/browserDrivers/msedgedriver.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/filesPDF/Capstone_Project_ITJ_Automation_Bootcamp_2.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/filesPDF/ITJ_BootCamp_Test_Automation_TestCases_Diego_Flores.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/SR12111Run.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/SR12120Run.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/SR12121Run.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/SR12130Run_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/SR12130Run_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/TestNGReport.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/TestNGReport2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/allTest.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testng_DemoBlaze.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/DemoBlazePage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/steps/DemoBlazeSteps.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tests/CustomAssertions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tests/CustomAssertions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tests/DemoBlazeTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/steps/CartSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/steps/CartSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/steps/MainSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/steps/MainSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/steps/ProductSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/steps/ProductSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tests/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tests/SR_12111.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tests/SR_12111.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tests/SR_12120.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tests/SR_12120.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tests/SR_12121.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tests/SR_12121.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tests/SR_12130.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tests/SR_12130.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testng_SR-12111.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng_SR-12111.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testng_SR-12120 .xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng_SR-12120 .xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testng_SR-12121 .xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng_SR-12121 .xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testng_SR-12130 .xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng_SR-12130 .xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testng_SR-12120 .xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng_SR-12120.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testng_SR-12121 .xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng_SR-12121.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testng_SR-12130 .xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng_SR-12130.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,18 +64,66 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "D:/2022/Java Projects/BootCamp_project_1"
+    "last_opened_file_path": "D:/2022/Java Projects/Capstone_project_Test_Automation/src/main/resources/browserDrivers",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\2022\Java Projects\Capstone_project_Test_Automation\src\main\resources\browserDrivers" />
+      <recent name="D:\2022\Java Projects\Capstone_project_Test_Automation\src\main\resources\filesPDF" />
+      <recent name="D:\2022\Java Projects\Capstone_project_Test_Automation\src\main\resources" />
       <recent name="D:\2022\Java Projects\Capstone_project_Test_Automation" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\2022\Java Projects\Capstone_project_Test_Automation\src\main\resources\filesPDF" />
+    </key>
   </component>
-  <component name="RunManager" selected="TestNG.D:/2022/Java Projects/Capstone_project_Test_Automation/testng_SR-12130 .xml">
+  <component name="RunManager" selected="TestNG.D:/2022/Java Projects/Capstone_project_Test_Automation/testng_DemoBlaze.xml">
+    <configuration name="D:/2022/Java Projects/Capstone_project_Test_Automation/testng_DemoBlaze.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Capstone_project_Test_Automation" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng_DemoBlaze.xml" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="D:\2022\Java Projects\Capstone_project_Test_Automation\out" />
+      <option name="USE_DEFAULT_REPORTERS" value="true" />
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="D:/2022/Java Projects/Capstone_project_Test_Automation/testng_SR-12111.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Capstone_project_Test_Automation" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/testng_SR-12111.xml" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="D:/2022/Java Projects/Capstone_project_Test_Automation/testng_SR-12120.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Capstone_project_Test_Automation" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng_SR-12120.xml" />
       <option name="TEST_OBJECT" value="SUITE" />
       <properties />
       <listeners />
@@ -73,9 +131,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="D:/2022/Java Projects/Capstone_project_Test_Automation/testng_SR-12120 .xml" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="D:/2022/Java Projects/Capstone_project_Test_Automation/testng_SR-12121.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Capstone_project_Test_Automation" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng_SR-12120 .xml" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng_SR-12121.xml" />
       <option name="TEST_OBJECT" value="SUITE" />
       <properties />
       <listeners />
@@ -83,9 +141,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="D:/2022/Java Projects/Capstone_project_Test_Automation/testng_SR-12121 .xml" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="D:/2022/Java Projects/Capstone_project_Test_Automation/testng_SR-12130.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Capstone_project_Test_Automation" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng_SR-12121 .xml" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng_SR-12130.xml" />
       <option name="TEST_OBJECT" value="SUITE" />
       <properties />
       <listeners />
@@ -93,41 +151,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="D:/2022/Java Projects/Capstone_project_Test_Automation/testng_SR-12130 .xml" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Capstone_project_Test_Automation" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng_SR-12130 .xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SR_12130.testListCart" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Capstone_project_Test_Automation" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.SR_12130" />
-      <option name="METHOD_NAME" value="testListCart" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+    <list>
+      <item itemvalue="TestNG.D:/2022/Java Projects/Capstone_project_Test_Automation/testng_SR-12120.xml" />
+      <item itemvalue="TestNG.D:/2022/Java Projects/Capstone_project_Test_Automation/testng_SR-12121.xml" />
+      <item itemvalue="TestNG.D:/2022/Java Projects/Capstone_project_Test_Automation/testng_SR-12130.xml" />
+      <item itemvalue="TestNG.D:/2022/Java Projects/Capstone_project_Test_Automation/testng_DemoBlaze.xml" />
+      <item itemvalue="TestNG.D:/2022/Java Projects/Capstone_project_Test_Automation/testng_SR-12111.xml" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.D:/2022/Java Projects/Capstone_project_Test_Automation/testng_SR-12130 .xml" />
-        <item itemvalue="TestNG.D:/2022/Java Projects/Capstone_project_Test_Automation/testng_SR-12121 .xml" />
-        <item itemvalue="TestNG.D:/2022/Java Projects/Capstone_project_Test_Automation/testng_SR-12120 .xml" />
+        <item itemvalue="TestNG.D:/2022/Java Projects/Capstone_project_Test_Automation/testng_DemoBlaze.xml" />
+        <item itemvalue="TestNG.D:/2022/Java Projects/Capstone_project_Test_Automation/testng_SR-12130.xml" />
+        <item itemvalue="TestNG.D:/2022/Java Projects/Capstone_project_Test_Automation/testng_SR-12121.xml" />
+        <item itemvalue="TestNG.D:/2022/Java Projects/Capstone_project_Test_Automation/testng_SR-12120.xml" />
         <item itemvalue="TestNG.D:/2022/Java Projects/Capstone_project_Test_Automation/testng_SR-12111.xml" />
-        <item itemvalue="TestNG.SR_12130.testListCart" />
       </list>
     </recent_temporary>
   </component>
@@ -196,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671509069166</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Refactor structure files to achieve The Page Object Model (POM) patter and added step to complete purchase in CartPage.">
+      <created>1671532594672</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1671532594672</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -219,6 +263,7 @@
     <MESSAGE value="SR-12130: Test to click the cart link will display below information:&#10;1. List of items added including picture, title, price and delete&#10;link." />
     <MESSAGE value="SR-12130: Add validations to &quot;Total of items prices&quot; and &quot;Place order button&quot;" />
     <MESSAGE value="SR-12130: Changes in how generate the list cart and added more assertions to total price in cart list." />
-    <option name="LAST_COMMIT_MESSAGE" value="SR-12130: Changes in how generate the list cart and added more assertions to total price in cart list." />
+    <MESSAGE value="Refactor structure files to achieve The Page Object Model (POM) patter and added step to complete purchase in CartPage." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor structure files to achieve The Page Object Model (POM) patter and added step to complete purchase in CartPage." />
   </component>
 </project>

@@ -18,6 +18,7 @@ public class MainSteps extends BaseStep {
         super(webDriver);
     }
 
+    // Step to know if category "Phone" is displayed and click it.
     public Boolean getCategoryPhone() {
         try {
             Boolean value = mainPage.getCategoryPhone().isDisplayed();
@@ -29,6 +30,7 @@ public class MainSteps extends BaseStep {
         }
     }
 
+    // Step to know if category "Laptop" is displayed and click it.
     public Boolean getCategoryLaptop() {
         try {
             Boolean value = mainPage.getCategoryLaptop().isDisplayed();
@@ -40,6 +42,7 @@ public class MainSteps extends BaseStep {
         }
     }
 
+    // Step to know if category "Monitor" is displayed and click it.
     public Boolean getCategoryMonitor() {
         try {
             Boolean value = mainPage.getCategoryMonitor().isDisplayed();
@@ -51,6 +54,7 @@ public class MainSteps extends BaseStep {
         }
     }
 
+    // Step to click the first product in Main Page
     public Boolean getProductCatalog() {
         try {
             boolean isDisplayed = mainPage.getProductCatalog().isDisplayed();
@@ -61,11 +65,13 @@ public class MainSteps extends BaseStep {
         }
     }
 
+    // Step to get list of multi-products in Main Page.
     public List<WebElement> listToAddMultipleProducts() {
         List<WebElement> products = new WebDriverWait(webDriver, Duration.ofSeconds(5)).until(ExpectedConditions.visibilityOfAllElements(mainPage.getListProducts()));
         return products;
     }
 
+    // Step to click Cart Link
     public Boolean clickCartLink() {
         try {
             mainPage.getBtnCart().click();

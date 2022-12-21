@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Testing DemoBlaze">
+    <test verbose="2" preserve-order="true" name="Test: Main Page Categories">
+        <classes>
+            <class name="tests.SR_12111"/>
+        </classes>
+    </test>
+    <test name="Test: Elements Product">
+        <classes>
+            <class name="tests.SR_12120"/>
+        </classes>
+    </test>
+    <test name="Test: Alert for add product">
+        <classes>
+            <class name="tests.SR_12121"/>
+        </classes>
+    </test>
+    <test name="Test: Purchase Cart List">
+        <classes>
+            <class name="tests.SR_12130"/>
+        </classes>
+    </test>
+</suite>

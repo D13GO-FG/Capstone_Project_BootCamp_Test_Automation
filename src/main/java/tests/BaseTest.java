@@ -1,41 +1,41 @@
 package tests;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.*;
 
 public class BaseTest {
     public WebDriver driver = getDriver();
     private WebDriver getDriver(){
-        setupDriver("edge");
+        setupDriver("edge"); // The change will depend on the browser you are using.
         driver.get("https://www.demoblaze.com/");
         driver.manage().window().maximize();
         return driver;
     }
 
+    // Select for different type of driver.
     private void setupDriver(String browserName) {
         switch(browserName) {
             case "edge":
-                System.setProperty("webdriver.edge.driver", "D:/2022/Selemiun Driver and jars/edgedriver/msedgedriver.exe");
+                System.setProperty("webdriver.edge.driver", "src/main/resources/browserDrivers/msedgedriver.exe");
                 driver = new EdgeDriver();
                 break;
             case "firefox":
-                System.setProperty("webdriver.gecko.driver", "D:/2022/Selemiun Driver and jars/FireFoxDriver/geckodriver-v0.32.0-win64/geckodriver.exe");
+                System.setProperty("webdriver.gecko.driver", "src/main/resources/browserDrivers/geckodriver.exe");
                 driver = new FirefoxDriver();
+                break;
+            case "chrome":
+                System.setProperty("webdriver.edge.driver", "src/main/resources/browserDrivers/chromedriver.exe");
+                driver = new ChromeDriver();
                 break;
             default:
                 System.out.println("Web Driver was not found in directory");
         }
     }
 
-    @BeforeMethod(alwaysRun = true)
-    public void beforeTest() {
-        System.out.println("Execution test ...");
-    }
-
-    @AfterMethod(alwaysRun = true)
+    @AfterClass
     public void afterTest() {
         System.out.println("Closing test ...");
         driver.quit();

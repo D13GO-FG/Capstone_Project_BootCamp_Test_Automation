@@ -1,5 +1,6 @@
 package steps;
 
+import net.datafaker.Faker;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,13 +13,16 @@ import tests.CustomAssertions;
 
 import java.time.Duration;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class CartSteps extends BaseStep{
     CartPage cartPage = PageFactory.initElements(webDriver, CartPage.class);
+    Faker faker = new Faker(); // Get Fake data to "Place Order" Form
     public CartSteps(WebDriver webDriver) {
         super(webDriver);
     }
 
+    // Step to verify that table of cart list is displayed all the elements and get expected "Total price" for next assertion
     public Double tableProductCart() {
         List<WebElement> rows = new WebDriverWait(webDriver, Duration.ofSeconds(5)).until(ExpectedConditions.visibilityOfAllElements(cartPage.getTableCart()));
         List<WebElement> columns;
@@ -59,40 +63,43 @@ public class CartSteps extends BaseStep{
         return priceTotal;
     }
 
+    // Step to get actual "Total price"
     public Double labelTotalCart() {
         WebElement total = new WebDriverWait(webDriver, Duration.ofSeconds(5)).until(ExpectedConditions.visibilityOf(cartPage.getTotalCart()));
         String text = total.getText();
         double actualTotalPrice = Double.parseDouble(text);
-        System.out.println("Total: $" + actualTotalPrice);
+        System.out.println("\nTotal: $" + actualTotalPrice);
         return actualTotalPrice;
     }
 
+    // Step to know if "Place Order" is displayed.
     public Boolean btnPlaceOrder() {
         WebElement label = new WebDriverWait(webDriver, Duration.ofSeconds(5)).until(ExpectedConditions.visibilityOf(cartPage.getBtnPlaceOrder()));
         String text = label.getText();
-        System.out.println("Button " + text + " is displayed.");
+        System.out.println("\nButton " + text + " is displayed.");
         return cartPage.getBtnPlaceOrder().isDisplayed();
     }
 
+    //Step to fill out form in "Place Order" and get successful purchase.
     public String finishPlaceOrder(){
         try {
             cartPage.getBtnPlaceOrder().click();
             WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(5));
             wait.until(ExpectedConditions.visibilityOf(cartPage.getModalPurchase()));
-            cartPage.getInputName().sendKeys("Luis Diego Flores");
-            cartPage.getInputCountry().sendKeys("Mexico");
-            cartPage.getInputCity().sendKeys("Tijuana");
-            cartPage.getInputCard().sendKeys("0000000000000001");
-            cartPage.getInputMonth().sendKeys("January");
-            cartPage.getInputYear().sendKeys("2023");
+            cartPage.getInputName().sendKeys(faker.name().fullName());
+            cartPage.getInputCountry().sendKeys(faker.address().country());
+            cartPage.getInputCity().sendKeys(faker.address().city());
+            cartPage.getInputCard().sendKeys(faker.number().digits(16));
+            cartPage.getInputMonth().sendKeys(faker.date().past(1, TimeUnit.HOURS, "MM"));
+            cartPage.getInputYear().sendKeys(faker.date().past(1, TimeUnit.HOURS, "YYYY"));
             cartPage.getBtnPurchase().click();
             WebElement successTitle = new WebDriverWait(webDriver, Duration.ofSeconds(5)).until(ExpectedConditions.visibilityOf(cartPage.getTitleSuccess()));
             String title = successTitle.getText();
             cartPage.getBtnOK().click();
-            System.out.println(title);
+            System.out.println("\nFinal Description: " + title);
             return title;
         }catch (Exception e){
-            return "Purchase fail!";
+            return "\nFinal Description: Purchase fail!";
         }
 
     }

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="4" guice-stage="DEVELOPMENT" name="Failed suite [Testing DemoBlaze]" parallel="methods">
+  <test thread-count="4" name="Test 1(failed)" parallel="methods">
+    <groups>
+      <run>
+        <include name="SR-12111"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="tests.SR_12111">
+        <methods>
+          <include name="testCategories"/>
+        </methods>
+      </class> <!-- tests.SR_12111 -->
+    </classes>
+  </test> <!-- Test 1(failed) -->
+  <test thread-count="4" name="SR-12120(failed)" parallel="methods">
+    <groups>
+      <run>
+        <include name="SR-12120"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="tests.SR_12120">
+        <methods>
+          <include name="testProductDetails"/>
+        </methods>
+      </class> <!-- tests.SR_12120 -->
+    </classes>
+  </test> <!-- SR-12120(failed) -->
+  <test thread-count="4" name="SR-12121(failed)" parallel="methods">
+    <groups>
+      <run>
+        <include name="SR-12121"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="tests.SR_12121">
+        <methods>
+          <include name="testAlertCartButton"/>
+        </methods>
+      </class> <!-- tests.SR_12121 -->
+    </classes>
+  </test> <!-- SR-12121(failed) -->
+  <test thread-count="4" name="SR_12130(failed)" parallel="methods">
+    <groups>
+      <run>
+        <include name="SR_12130"/>
+        <include name="SR_12131"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="tests.SR_12130">
+        <methods>
+          <include name="testFinishPurchase"/>
+          <include name="testListCart"/>
+        </methods>
+      </class> <!-- tests.SR_12130 -->
+    </classes>
+  </test> <!-- SR_12130(failed) -->
+</suite> <!-- Failed suite [Testing DemoBlaze] -->

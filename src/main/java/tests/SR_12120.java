@@ -1,15 +1,22 @@
 package tests;
 
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import steps.MainSteps;
 import steps.ProductSteps;
 
 public class SR_12120 extends BaseTest{
-    MainSteps mainSteps = new MainSteps(driver);
-    ProductSteps productSteps = new ProductSteps(driver);
+    private MainSteps mainSteps;
+    private ProductSteps productSteps;
 
-    @Test(description = "SR-12120: Test to click any of the products in the catalog displayed in the homepage and look details", groups = "SR-12120")
-    public void testClickProductDetails(){
+    @BeforeClass
+    private void beforeClass() {
+        mainSteps = new MainSteps(driver);
+        productSteps = new ProductSteps(driver);
+    }
+
+    @Test(description = "SR-12120: Test to click on a displayed product and verify that the product elements are displayed", groups = "SR-12120")
+    public void testProductDetails(){
         CustomAssertions.isElementDisplayed(mainSteps.getProductCatalog(), "FIRST PRODUCT");
         CustomAssertions.isDetailEmptyProduct(productSteps.getProductName(),"NAME");
         CustomAssertions.isDetailEmptyProduct(productSteps.getProductPrice(), "PRICE");
